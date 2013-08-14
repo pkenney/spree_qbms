@@ -2,6 +2,8 @@ module Spree
   class Gateway::Qbms < Gateway
     preference :login, :string
     preference :ticket, :string
+    
+    attr_accessible :preferred_login, :preferred_ticket
 
     def provider_class
       ActiveMerchant::Billing::QbmsGateway
